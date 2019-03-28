@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application name="GitHubRepository" provider="Softeam">
+	<description>Monitoring of a GitHub repository including commits supervision and issue traking</description>
+	<measures>
+		<measure name="GitHubCommit" scheduling="10" schedulingUnit="m"/>
+		<measure name="GitHubIssue" scheduling="10" schedulingUnit="m"/>
+		<measure name="GitHubIssueStat" scheduling="10" schedulingUnit="m"/>
+		<measure name="GitHubRepository" scheduling="10" schedulingUnit="m"/>
+	</measures>
+	<dashboards>
+		<dashboard label="GitHub Repository">
+			<view measure="GitHubRepository" view="Name"/>
+			<view measure="GitHubRepository" view="Owner"/>
+			<view measure="GitHubRepository" view="LastUpdate"/>
+			<view measure="GitHubRepository" view="Language"/>
+			<view measure="GitHubRepository" view="Stars"/>
+			<view measure="GitHubRepository" view="Suscribers"/>
+			<view measure="GitHubRepository" view="Forks"/>
+			<view measure="GitHubRepository" view="Branches"/>
+			<view measure="GitHubCommit" view="Commits History"/>
+			<view measure="GitHubCommit" view="Repository Activity"/>
+			<view measure="GitHubCommit" view="Commits By Users"/>
+			<view measure="GitHubCommit" view="Commits"/>
+		</dashboard>
+		<dashboard label="Issus">
+			<view measure="GitHubIssueStat" view="Issues"/>
+			<view measure="GitHubIssueStat" view="Average Open Duration"/>
+			<view measure="GitHubIssue" view="GitHub Issues"/>
+		</dashboard>
+	</dashboards>	
+</Application>

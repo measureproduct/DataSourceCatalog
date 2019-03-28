@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application name="SonarQubeApplication" provider="Measure.org By Softeam">
+	<description>Monitoring of a SonarQube version 6.7 LTS including : Bug Vulnerabilities, Code Smells, Coverage and Duplications</description>
+	<measures>
+		<measure name="SonarQubeBugs-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeVulnerabilities-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeCodeSmells-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeSqaleIndex-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeCoverage-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeTests-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeDuplicatedLines-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeDuplicatedBlocks-V6" scheduling="10" schedulingUnit="m"/>
+		<measure name="SonarQubeDuplicatedLinesDensity-V6" scheduling="10" schedulingUnit="m"/>
+	</measures>
+	<dashboards>
+		<dashboard label="SonarQube Bugs Vulnerabilities Code Smells">
+			<view measure="SonarQubeSqaleIndex-V6" view="Maintainability effort history"/>
+			<view measure="SonarQubeBugs-V6" view="Number of bugs"/>
+			<view measure="SonarQubeVulnerabilities-V6" view="Number of vulnerabilities"/>
+			<view measure="SonarQubeCodeSmells-V6" view="Number of codesmells"/>
+		</dashboard>
+		<dashboard label="SonarQube Coverage Duplications">
+			<view measure="SonarQubeDuplicatedBlocks-V6" view="Duplicated block history"/>
+			<view measure="SonarQubeDuplicatedLines-V6" view="Duplicated lines history"/>
+			<view measure="SonarQubeDuplicatedLinesDensity-V6" view="Duplicated lines density history"/>
+			<view measure="SonarQubeCoverage-V6" view="Number of coverage (lines and conditions)"/>
+			<view measure="SonarQubeTests-V6" view="Number of unit tests"/>
+		</dashboard>
+	</dashboards>	
+</Application>

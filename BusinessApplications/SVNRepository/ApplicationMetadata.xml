@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application name="SVNRepository" provider="Measure.org By Softeam">
+	<description>Monitoring of an SVN repository including commits traking</description>
+	<measures>
+		<measure name="SVNCommitTracker" scheduling="10" schedulingUnit="m"/>
+		<measure name="SVNRepositoryStatus" scheduling="10" schedulingUnit="m"/>
+	</measures>
+	<dashboards>
+		<dashboard label="SVN Repository">
+			<view measure="SVNCommitTracker" view="Commits History"/>
+			<view measure="SVNCommitTracker" view="Commits By Users"/>
+			<view measure="SVNRepositoryStatus" view="Last Revision Number"/>
+			<view measure="SVNRepositoryStatus" view="Number Of Directory"/>
+			<view measure="SVNRepositoryStatus" view="Number Of Files"/>
+			<view measure="SVNRepositoryStatus" view="Repository Size (MO)"/>
+			<view measure="SVNRepositoryStatus" view="Number Of Locked Files"/>
+			<view measure="SVNCommitTracker" view="Commits Table"/>
+		</dashboard>
+	
+	</dashboards>	
+</Application>

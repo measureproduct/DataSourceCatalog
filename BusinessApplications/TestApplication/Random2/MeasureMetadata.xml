@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="PlatformTest" name="Random2" provider="Measure.org By Softeam" type="DIRECT">
+    <description>Test Measure : Simple example of Direct Measure</description>
+ 
+      <scopeProperties defaultValue="100" name="MaxRange" type="INTEGER"/>
+      <scopeProperties defaultValue="0" name="MinRange" type="INTEGER"/>
+      <scopeProperties defaultValue="5" name="Delta" type="INTEGER"/>
+      <scopeProperties defaultValue="20" name="Value" type="INTEGER"/>
+   
+   
+ 	<unit name="RandomUnit">
+        <fields fieldName="value" fieldType="u_integer" />
+    </unit>
+    <views>
+    	<view name="Random Measure" type="BAR" default="true" autoRefresh="true">
+    		<description>Random Value By Seconde</description>
+    		<datasource dataIndex="value" dateIndex="postDate"  timePeriode="1m" timeAggregation="s"/>
+    		<layout width="400" height="300" color="%23E24D42" />
+    	</view>  
+    </views>
+</Measure>

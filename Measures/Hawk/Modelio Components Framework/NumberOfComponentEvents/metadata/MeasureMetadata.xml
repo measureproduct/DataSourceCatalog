@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Naval Group" name="NumberOfComponentEvents" provider="Softeam" type="COUNTING">
+    <description>NCE is the total number of events interfaces in the java Modelio model. Events are produced from lower to upper layers. They reflect the functional richness of the sensors but also of the data produced by the data fusion process.
+(Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).</description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+    <views>
+		<view name="NumberOfComponentEvents History" type="AREA" default="true" autoRefresh="true">
+			<description>NumberOfComponentEvents History</description>
+			<datasource dataIndex="value" dateIndex="postDate" timePeriode="30d" timeAggregation="d" />
+			<layout width="420" height="420" color="%23FCD071" />
+		</view>
+		<view name="NumberOfComponentEvents" type="VALUE" default="false" autoRefresh="false">
+			<datasource dataIndex="value" timePeriode="1y" />
+			<layout width="220" height="150" fontSize="60" color="#FCD071" />
+		</view>
+	</views>
+</Measure>

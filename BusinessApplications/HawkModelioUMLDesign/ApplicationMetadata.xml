@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application name="HawkModelioUMLDesign" provider="Measure.org By Softeam">
+	<description>HawkModelioUMLDesign : UML metrics measured by Hawk on Modelio Model</description>
+	<measures>
+		<measure name="NumberOfActors" scheduling="1" schedulingUnit="d"/>
+		<measure name="NumberOfClasses" scheduling="1" schedulingUnit="d"/>
+		<measure name="NumberOfComponent" scheduling="1" schedulingUnit="d"/>
+		<measure name="NumberOfFields" scheduling="1" schedulingUnit="d"/>
+		<measure name="NumberOfInterfaces" scheduling="1" schedulingUnit="d"/>
+		<measure name="NumberOfMethods" scheduling="1" schedulingUnit="d"/>
+		<measure name="NumberOfPackage" scheduling="1" schedulingUnit="d"/>
+		<measure name="NumberOfUseCase" scheduling="1" schedulingUnit="d"/>
+		<measure name="ClassComplexityIndex" scheduling="1" schedulingUnit="d"/>
+		<measure name="ClassDependeciesRatio" scheduling="1" schedulingUnit="d"/>
+		<measure name="InterfaceByComponentRatio" scheduling="1" schedulingUnit="d"/>
+		<measure name="ModelAbstractnessIndex" scheduling="1" schedulingUnit="d"/>
+		<measure name="PackageDependeciesRatio" scheduling="1" schedulingUnit="d"/>
+		<measure name="SoftwareComponentDecomposition" scheduling="1" schedulingUnit="d"/>
+	</measures>
+	<dashboards>
+		<dashboard label="ModelAnalysis">
+			<view measure="NumberOfActors" view="Number Of Actors"/>
+			<view measure="NumberOfClasses" view="Number Of Classes"/>
+			<view measure="NumberOfComponent" view="Number Of Components"/>
+			<view measure="NumberOfFields" view="Number Of Fields"/>
+			<view measure="NumberOfInterfaces" view="Number Of Interfaces"/>
+			<view measure="NumberOfMethods" view="Number Of Methods"/>
+			<view measure="NumberOfPackage" view="Number Of Packages"/>
+			<view measure="NumberOfUseCase" view="Number Of Use Cases"/>
+		</dashboard>
+		<dashboard label="ModelQuality">
+			<view measure="ClassComplexityIndex" view="Class Complexity Index"/>
+			<view measure="ClassDependeciesRatio" view="Class Dependency Ratio"/>
+			<view measure="InterfaceByComponentRatio" view="Interface By Component Ratio"/>
+			<view measure="ModelAbstractnessIndex" view="Model Abstractness Index"/>
+			<view measure="PackageDependeciesRatio" view="Package Dependency Ratio"/>
+			<view measure="SoftwareComponentDecomposition" view="Software Component Decomposition"/>
+		</dashboard>
+	</dashboards>	
+</Application>
+

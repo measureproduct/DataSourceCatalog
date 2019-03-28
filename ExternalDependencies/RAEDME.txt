@@ -1,0 +1,14 @@
+To compile Hawk Measures, an external library must be include into your Maven Repository
+
+Library : org.hawk.service.api_1.2.0.201902121459.jar
+Sources : https://github.com/mondo-project/mondo-hawk/tree/master/plugins-server/org.hawk.service.api
+
+<dependency>
+	<groupId>org.hawk.service</groupId>
+	<artifactId>org.hawk.service.api</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+</dependency>
+
+
+mvn install:install-file -Dfile= ../org.hawk.service.api_1.2.0.201902121459.jar -DgroupId=org.hawk.service -DartifactId=org.hawk.service.api -Dversion=1.0.0-SNAPSHOT -Dpackaging=jar
+

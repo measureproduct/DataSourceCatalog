@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="NumberofServicesperitem" type="BINARY">
+    <description>SPI, the number of services ports per item, is the ratio between the number of Services interfaces and the number of component items (including the component implementations) in the java Modelio model, or more formally : SPI = NCS / (NCI + NIM). It provides, allong with the SPC metric (number of services per components), hints about the granularity of the modelled architecture.</description>
+    <references measureRef="Number of Component items and Implementation" number="1" role=""/>
+    <references measureRef="Number of Component Services" number="1" role=""/>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Percent">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+    <views>
+		<view name="NumberofServicesperitem History" type="AREA" default="true" autoRefresh="true">
+			<description>NumberofServicesperitem History</description>
+			<datasource dataIndex="value" dateIndex="postDate" timePeriode="30d" timeAggregation="d" />
+			<layout width="420" height="420" color="%23FCD071" />
+		</view>
+		<view name="NumberofServicesperitem" type="VALUE" default="false" autoRefresh="false">
+			<datasource dataIndex="value" timePeriode="1y" />
+			<layout width="220" height="150" fontSize="60" color="#FCD071" />
+		</view>
+	</views>
+</Measure>

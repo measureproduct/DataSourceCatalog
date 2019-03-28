@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application name="TestApplication" provider="Measure.org By Softeam">
+	<description>Test Measurement Application : Simple example of Measurement Application</description>
+	<measures>
+		<measure name="Random2" scheduling="1" schedulingUnit="s"/>
+		<measure name="Random1" scheduling="1" schedulingUnit="s"/>
+	</measures>
+	<dashboards>
+		<dashboard label="dashboardlabel1">
+			<view measure="Random1" view="Random Measure"/>
+			<view measure="Random2" view="Random Measure"/>
+		</dashboard>
+	</dashboards>	
+</Application>

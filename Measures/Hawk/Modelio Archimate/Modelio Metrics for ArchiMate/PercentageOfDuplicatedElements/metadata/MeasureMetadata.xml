@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modeling Tool" name="PercentageOfDuplicatedElements" provider="Softeam" type="DIRECT">
+    <description>Percentage of suplicated elements in the ArchiMate project repository</description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="modelio://Modeliosoft.Archimate/1.0.02" name="defaultNamespaces" type="STRING"/>
+    <scopeProperties defaultValue="var listElements=Element.latest.all.select(e|e.Name.length>0).collect(c|Sequence{c.Name, Model.getTypeOf(c).name}); var listSize=listElements.size;var nbDuplicated=0;for (i in Sequence{1..(listSize-2)}){for(j in Sequence{(i+1)..(listSize-1)}){if(listElements.at(i).first()=listElements.at(j).first() and listElements.at(i).second()=listElements.at(j).second()){nbDuplicated++;break;}}}return nbDuplicated.asDouble()/listSize.asDouble();" name="queryField" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+    <views>
+		<view name="Measure History" type="AREA" default="true" autoRefresh="true">
+			<description>Measure History</description>
+			<datasource dataIndex="value" dateIndex="postDate" timePeriode="30d" timeAggregation="d" />
+			<layout width="420" height="420" color="%23FCD071" />
+		</view>
+		<view name="Measure" type="VALUE" default="false" autoRefresh="false">
+			<datasource dataIndex="value" timePeriode="1y" />
+			<layout width="220" height="150" fontSize="60" color="#FCD071" />
+		</view>
+	</views>
+</Measure>

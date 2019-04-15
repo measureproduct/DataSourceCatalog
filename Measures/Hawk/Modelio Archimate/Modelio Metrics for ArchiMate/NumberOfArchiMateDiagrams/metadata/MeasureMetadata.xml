@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modeling Tool" name="NumberOfArchiMateDiagrams" provider="Softeam" type="DIRECT">
+    <description>Number of Diagrams in the ArchiMate project repository</description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="modelio://Modeliosoft.Archimate/1.0.02" name="defaultNamespaces" type="STRING"/>
+    <scopeProperties defaultValue="return Model.types.select(t|t.metamodel.uri ='modelio://Modeliosoft.Archimate/1.0.02' and (t.Name='ViewPointDiagram' or t.Name='ArchimateView')).collect(t|t.latest.all.size).sum();" name="queryField" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+    <views>
+		<view name="Measure History" type="AREA" default="true" autoRefresh="true">
+			<description>Measure History</description>
+			<datasource dataIndex="value" dateIndex="postDate" timePeriode="30d" timeAggregation="d" />
+			<layout width="420" height="420" color="%23FCD071" />
+		</view>
+		<view name="Measure" type="VALUE" default="false" autoRefresh="false">
+			<datasource dataIndex="value" timePeriode="1y" />
+			<layout width="220" height="150" fontSize="60" color="#FCD071" />
+		</view>
+	</views>
+</Measure>

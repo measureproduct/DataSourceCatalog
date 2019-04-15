@@ -3,7 +3,7 @@
     <description>Type EOL query in the text field for the Archimate project repository. Ex: return Concept.latest.all.size</description>
     <scopeProperties defaultValue="*" name="repository" type="STRING"/>
     <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
-    <scopeProperties defaultValue="modelio://Modeliosoft.Archimate/1.0.03" name="defaultNamespaces" type="STRING"/>
+    <scopeProperties defaultValue="modelio://Modeliosoft.Archimate/1.0.02" name="defaultNamespaces" type="STRING"/>
     <scopeProperties defaultValue="return Concept.latest.all.size;" name="queryField" type="STRING"/>
     <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
     <unit name="Numeric">
